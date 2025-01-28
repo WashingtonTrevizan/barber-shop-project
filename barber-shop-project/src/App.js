@@ -1,5 +1,6 @@
 import Header from './components/Header/index.js';
 import styled from 'styled-components';
+import Carousel from './components/carousel/index.js';
 
 const AppContainer = styled.div`
       width: 100vw;
@@ -11,6 +12,7 @@ function App() {
   return (
     <AppContainer>
       <Header />
+      <Carousel />
     </AppContainer>
   );
 }
