@@ -1,15 +1,36 @@
-import './style.css';
+import styled from 'styled-components';
+
+const Option = styled.li`
+    list-style: none;
+    font-size: 16px;
+    min-width: 120px;
+    max-height: auto;
+    height: 100%;
+    padding: 0 15px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+
+`
+
+const Options = styled.ul`
+    display: flex;
+    color: black;
+`
 
 const textOptions = ['HOME', 'SERVIÇOS', 'LOCALIZAÇÃO','CONTATO'];
 
 function OptionsHeader() {
   return (
 <header className="App-header">
-<ul className='options'>
+<Options>
   { textOptions.map((text) => (
-    <li className='option'><p>{text}</p></li>
+    <Option><p>{text}</p></Option>
   ))}
-</ul>
+</Options>
 </header>
   );
 }
