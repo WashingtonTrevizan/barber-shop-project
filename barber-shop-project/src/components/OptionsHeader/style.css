@@ -1,19 +1,7 @@
-.App {
-    width: 100vw;
-    height: 100vh;
-    background-image: linear-gradient(180deg, #a69dbe 0%, #444658 100%);
-
-}
-
-.App-header {
-    background-color:#ebe5e5;
-    max-height: 70px;
-    display: flex;
-    justify-content: center;
-}
 
 .options {
     display: flex;
+    color: black;
 }
 
 .option {

@@ -1,20 +1,17 @@
-import './App.css';
-import Logo from './components/Logo';
+import Header from './components/Header/index.js';
+import styled from 'styled-components';
 
-const textOptions = ['HOME', 'SERVIÇOS', 'LOCALIZAÇÃO','CONTATO'];
+const AppContainer = styled.div`
+      width: 100vw;
+      height: 100vh;
+      background-image: linear-gradient(180deg, #a69dbe 0%, #444658 100%);
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <Logo />
-        <ul className='options'>
-          { textOptions.map((text) => (
-            <li className='option'><p>{text}</p></li>
-          ))}
-        </ul>
-      </header>
-    </div>
+    <AppContainer>
+      <Header />
+    </AppContainer>
   );
 }
 
