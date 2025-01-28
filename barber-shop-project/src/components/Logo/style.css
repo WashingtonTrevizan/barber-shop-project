@@ -1,0 +1,12 @@
+.Logo {
+    display: flex;
+    font-size: 30px;
+    align-items: center;
+    max-height: 70px;
+  }
+
+.logo-img {
+    max-width: 70px;
+    max-height: 70px;
+    margin: 0px 10px 0px 10px;
+}
