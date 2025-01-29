@@ -21,7 +21,7 @@ const Options = styled.ul`
     color: black;
 `
 
-const textOptions = ['HOME', 'SERVIÇOS', 'LOCALIZAÇÃO','CONTATO'];
+const textOptions = ['HOME','GALERIA', 'SERVIÇOS','ASSINATURAS','CONTATO',];
 
 function OptionsHeader() {
   return (
