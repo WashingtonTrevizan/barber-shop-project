@@ -2,8 +2,9 @@ import Header from './components/Header';
 import styled from 'styled-components';
 import Carousel from './components/carousel';
 import Card from './components/Card';
-import SectionContainer from './components/Container';
+import SContainer from './components/Container';
 import Form from './components/Form';
+import GoogleMapsLink from './components/GoogleMaps';
 
 const AppContainer = styled.div`
       width: 100%;
@@ -16,12 +17,15 @@ function App() {
     <AppContainer>
       <Header />
       <Carousel />
-      <SectionContainer>
+      <SContainer>
       <Card />
       <Card />
       <Card />
-      </SectionContainer>
+      </SContainer>
+      <SContainer>
       <Form/>
+      <GoogleMapsLink />
+      </SContainer>
     </AppContainer>
 
   );

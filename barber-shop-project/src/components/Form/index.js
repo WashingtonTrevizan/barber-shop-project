@@ -9,12 +9,13 @@ const FormContainer = styled.div`
   background-color: #fff;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
 `;
 
 const Input = styled.input`
   margin: 10px 0;
   padding: 10px;
-  width: 100%;
+  width: 90%;
   border: 1px solid #ccc;
   border-radius: 4px;
 `;
@@ -36,7 +37,8 @@ const Form = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    message: '',
+    number:''
   });
 
   const handleChange = (e) => {
@@ -73,9 +75,17 @@ const Form = () => {
         <Input
           type="text"
           name="message"
-          placeholder="Message"
+          placeholder="Mensagem"
           value={formData.message}
           onChange={handleChange}
+        />
+        <Input
+          type="number"
+          name="telefone"
+          placeholder="Telefone para contato"
+          value={formData.telefone}
+          onChange={handleChange}
+          pattern="[0-9]*"
         />
         <Button type="submit">Submit</Button>
       </form>
