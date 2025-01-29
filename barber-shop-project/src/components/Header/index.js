@@ -1,5 +1,5 @@
-import Logo from '../Logo/index.js';
-import OptionsHeader from '../OptionsHeader/index.js';
+import Logo from '../Logo';
+import OptionsHeader from '../OptionsHeader';
 import styled from 'styled-components';
 
 const HeaderContainer = styled.header`

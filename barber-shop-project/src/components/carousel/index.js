@@ -1,6 +1,7 @@
 import React from 'react';
-import { Button, Typography } from '@mui/material';
+import { Typography} from '@mui/material';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation } from 'swiper/modules';
 import 'swiper/swiper-bundle.css';
 import testeImage from '../../image/teste.jpg';
 import styled from 'styled-components';
@@ -16,7 +17,12 @@ const Carousel = () => {
       <Typography variant="h4" gutterBottom>
         Mensagem de apresentação
       </Typography>
-      <Swiper spaceBetween={50} slidesPerView={3}>
+      <Swiper
+        spaceBetween={50}
+        slidesPerView={3}
+        navigation
+        modules={[Navigation]}
+      >
         <SwiperSlide>
           <CarouselImage src={testeImage} alt="Slide 1" />
         </SwiperSlide>
