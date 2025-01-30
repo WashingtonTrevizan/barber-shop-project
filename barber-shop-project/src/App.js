@@ -10,13 +10,15 @@ import HomeSection from './components/HomeMessage';
 import PhotoCard from './components/Gallery';
 import ServicePriceComponent from './components/ServicePrice';
 import Footer from './components/Footer';
+import Background from './image/background-main.svg';
 
 const AppContainer = styled.div`
       width: 100%;
       height: 100%;
-      background-image: linear-gradient(180deg, #a69dbe 0%, #444658 100%);
-`;
-
+      background-image: url(${Background});
+      background-size: cover;
+      backgroun-repeat: no-repeat;
+      `;
 function App() {
   return (
     <AppContainer>
