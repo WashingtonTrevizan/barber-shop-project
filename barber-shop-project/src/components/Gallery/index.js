@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Container, Container as MuiContainer } from '@mui/material';
+import { Container as MuiContainer } from '@mui/material';
 import gallery1 from '../../image/gallery-image1.jpeg';
 import gallery2 from '../../image/gallery-image2.jpeg';
 import gallery3 from '../../image/gallery-image3.jpeg';

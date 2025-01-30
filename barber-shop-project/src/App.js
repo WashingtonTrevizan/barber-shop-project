@@ -8,6 +8,8 @@ import PriceList from './components/PriceList';
 import ImageCarousel from './components/ImageCarousel';
 import HomeSection from './components/HomeMessage';
 import PhotoCard from './components/Gallery';
+import ServicePriceComponent from './components/ServicePrice';
+import Footer from './components/Footer';
 
 const AppContainer = styled.div`
       width: 100%;
@@ -23,13 +25,15 @@ function App() {
       <ImageCarousel />
       <Card />
       <PhotoCard />
+      <ServicePriceComponent />
       <PriceList />
       <SContainer>
         <Form />
         <GoogleMapsLink />
       </SContainer>
+      <Footer/>
     </AppContainer>
-    
+
 
   );
 }
