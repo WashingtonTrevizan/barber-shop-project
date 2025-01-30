@@ -6,6 +6,8 @@ import Form from './components/Form';
 import GoogleMapsLink from './components/GoogleMaps';
 import PriceList from './components/PriceList';
 import ImageCarousel from './components/ImageCarousel';
+import HomeSection from './components/HomeMessage';
+import PhotoCard from './components/Gallery';
 
 const AppContainer = styled.div`
       width: 100%;
@@ -17,18 +19,17 @@ function App() {
   return (
     <AppContainer>
       <Header />
+      <HomeSection />
       <ImageCarousel />
-      <SContainer>
-        <Card />
-        <Card />
-        <Card />
-      </SContainer>F
-        <PriceList />
+      <Card />
+      <PhotoCard />
+      <PriceList />
       <SContainer>
         <Form />
         <GoogleMapsLink />
       </SContainer>
     </AppContainer>
+    
 
   );
 }

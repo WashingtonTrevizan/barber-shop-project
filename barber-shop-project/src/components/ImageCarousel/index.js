@@ -3,6 +3,7 @@ import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import testeImage from '../../image/teste.jpg';
+import { Container } from "@mui/material";
 
 const Arrow = styled.div`
   &::before {
@@ -38,7 +39,7 @@ const images = [
   testeImage
 ];
 
-const ImageCarousel = () => {
+const Carousel = () => {
   const settings = {
     dots: true,
     infinite: true,
@@ -86,6 +87,13 @@ const PrevArrow = (props) => {
   );
 };
 
+function ImageCarousel() {
+  return (
+    <Container>
+      <Carousel />
+    </Container>
+  );
+}
 
 
 export default ImageCarousel;
