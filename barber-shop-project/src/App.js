@@ -1,7 +1,6 @@
 import Header from './components/Header';
 import styled from 'styled-components';
 import Card from './components/Card';
-import SContainer from './components/Container';
 import Form from './components/Form';
 import GoogleMapsLink from './components/GoogleMaps';
 import PriceList from './components/PriceList';
@@ -22,19 +21,29 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <Header />
+    <Header />
+    <div id="home">
       <HomeSection />
-      <ImageCarousel />
-      <Card />
+    </div>
+    <ImageCarousel />
+    <div id="galeria">
       <PhotoCard />
+    </div>
+    <div id="equipe">
+      <Card />
+    </div>
+    <div id="servicos">
       <ServicePriceComponent />
+    </div>
+    <div id="assinaturas">
       <PriceList />
-      <SContainer>
-        <Form />
-        <GoogleMapsLink />
-      </SContainer>
-      <Footer/>
-    </AppContainer>
+    </div>
+    <div id="contato">
+      <Form />
+    </div>
+    <GoogleMapsLink />
+    <Footer />
+  </AppContainer>
 
 
   );

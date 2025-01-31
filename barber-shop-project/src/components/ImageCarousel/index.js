@@ -2,12 +2,12 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import testeImage from '../../image/teste.jpg';
+import barbershop from '../../image/barber-shop3.jpeg';
 import { Container } from "@mui/material";
 
 const Arrow = styled.div`
   &::before {
-    color: black;
+    color: white;
     font-size: 20px;
   }
 `;
@@ -33,10 +33,10 @@ const StyledImage = styled.img`
 `;
 
 const images = [
-  testeImage,
-  testeImage,
-  testeImage,
-  testeImage
+  barbershop,
+  barbershop,
+  barbershop,
+  barbershop
 ];
 
 const Carousel = () => {

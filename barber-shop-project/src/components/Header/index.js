@@ -8,12 +8,14 @@ const HeaderContainer = styled.header`
     justify-content: flex-start; /* Alinha os itens à esquerda */
     align-items: center;
     padding: 0 16px;
+    box-shadow: 0 4px 2px -2px gray;
+    border-bottom: 2px solid #ccc;
 `;
 
 const MobileOptionsHeader = styled(OptionsHeader)`
     @media (max-width: 768px) {
         display: flex;
-        justify-content: flex-start; /* Alinha o MobileOptionsHeader à esquerda */
+        justify-content: f;
         width: auto;
         
         & > *:not(:first-child) {
@@ -25,8 +27,8 @@ const MobileOptionsHeader = styled(OptionsHeader)`
 function Header() {
     return (
         <HeaderContainer>
-            <MobileOptionsHeader/>
             <Logo/>
+            <MobileOptionsHeader/>
         </HeaderContainer>
     )
 }

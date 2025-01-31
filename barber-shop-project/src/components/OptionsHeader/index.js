@@ -6,18 +6,16 @@ import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 
 const Option = styled.li`
-  list-style: none;
-  font-size: 16px;
-  min-width: 120px;
-  max-height: auto;
-  height: 100%;
   padding: 0 15px;
   cursor: pointer;
   text-align: center;
   justify-content: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
 `;
 
 const Options = styled.ul`
@@ -29,48 +27,64 @@ const Options = styled.ul`
   }
 `;
 
-const textOptions = ['HOME', 'GALERIA', 'EQUIPE', 'SERVIÇOS', 'ASSINATURAS', 'CONTATO'];
+const textOptions = [
+  { text: 'HOME', id: 'home' },
+  { text: 'GALERIA', id: 'galeria' },
+  { text: 'EQUIPE', id: 'equipe' },
+  { text: 'SERVIÇOS', id: 'servicos' },
+  { text: 'ASSINATURAS', id: 'assinaturas' },
+  { text: 'CONTATO', id: 'contato' }
+];
 
 function OptionsHeader() {
   const [anchorEl, setAnchorEl] = useState(null);
 
-  const handleClick = (event) => {
+  const handleOptionClick = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    setAnchorEl(null);
+  };
+
+  const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleClose = () => {
+  const handleMenuClose = () => {
     setAnchorEl(null);
   };
 
   return (
-    <header className="App-header">
+    <>
       <Options>
-        {textOptions.map((text) => (
-          <Option key={text}><p>{text}</p></Option>
+        {textOptions.map((option, index) => (
+          <Option key={index} onClick={() => handleOptionClick(option.id)}>
+            {option.text}
+          </Option>
         ))}
       </Options>
-      <div className="mobile-menu">
-        <IconButton
-          edge="start"
-          color="inherit"
-          aria-label="menu"
-          onClick={handleClick}
-          sx={{ display: { xs: 'block', sm: 'none' } }}
-        >
-          <MenuIcon />
-        </IconButton>
-        <Menu
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={handleClose}
-          disableScrollLock
-        >
-          {textOptions.map((text) => (
-            <MenuItem key={text} onClick={handleClose}>{text}</MenuItem>
-          ))}
-        </Menu>
-      </div>
-    </header>
+      <IconButton
+        edge="start"
+        color="inherit"
+        aria-label="menu"
+        onClick={handleMenuOpen}
+        sx={{ display: { xs: 'block', sm: 'none' }, marginLeft: 4 }} 
+      >
+        <MenuIcon />
+      </IconButton>
+      <Menu
+        anchorEl={anchorEl}
+        open={Boolean(anchorEl)}
+        onClose={handleMenuClose}
+      >
+        {textOptions.map((option, index) => (
+          <MenuItem key={index} onClick={() => handleOptionClick(option.id)}>
+            {option.text}
+          </MenuItem>
+        ))}
+      </Menu>
+    </>
   );
 }
 

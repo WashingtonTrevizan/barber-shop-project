@@ -95,7 +95,7 @@ function ServicePriceComponent() {
   const secondColumnServices = services.slice(half);
 
   return (
-    <StyledContainer>
+    <StyledContainer id="galeria">
       <Title>NOSSOS SERVIÇOS</Title>
       <ServicesContainer>
         <ServiceColumn>
