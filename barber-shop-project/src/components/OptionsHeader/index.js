@@ -12,9 +12,10 @@ const Option = styled.li`
   justify-content: center;
   display: flex;
   align-items: center;
+  transition: border-bottom 0.3s ease;
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+   &:hover {
+    border-bottom: 2px solid darkgoldenrod;
   }
 `;
 

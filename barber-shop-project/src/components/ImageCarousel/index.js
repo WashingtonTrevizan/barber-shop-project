@@ -2,8 +2,11 @@ import Slider from "react-slick";
 import styled from "styled-components";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import barbershop from '../../image/barber-shop3.jpeg';
+import caroulseimage2 from '../../image/caroulseimage4.png';
+import caroulseimage3 from '../../image/caroulseimage3.png';
+import caroulseimage4 from '../../image/carouselimage2.png';
 import { Container } from "@mui/material";
+import cut from '../../image/mainnewimage.png';
 
 const Arrow = styled.div`
   &::before {
@@ -13,30 +16,68 @@ const Arrow = styled.div`
 `;
 
 const CarouselContainer = styled.div`
-  max-width: 100%;
-  margin: 0 auto;
+  max-width: 50%;
+  margin-left: 0;
   padding: 16px;
   max-height:auto;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
 `;
 
+const TextContainer = styled.div`
+  max-width: 50%;
+  padding: 16px;
+  color: #fff;
+  font-size: 18px;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+`;
 const StyledSlider = styled(Slider)`
   .slick-slide div {
     display: flex;
     justify-content: center;
-    max-height:80vh;
+    max-height:400px;
   }
 `;
 
 const StyledImage = styled.img`
-  width: 100%;
+  width: 600px;
   border-radius: 8px;
 `;
 
+const ContainerWrapper = styled.div`
+  display: flex;
+  flex-wrap: row;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+`;
+
+const StyledHeading = styled.h2`
+  color: darkgoldenrod;
+  text-align: center;
+`;
+
+const StyledParagraph = styled.p`
+  color: darkgray;
+  text-align: center;
+`;
+
+const StyledTextImage = styled.img`
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+`;
+
 const images = [
-  barbershop,
-  barbershop,
-  barbershop,
-  barbershop
+  caroulseimage2,
+  caroulseimage3,
+  caroulseimage4
 ];
 
 const Carousel = () => {
@@ -46,6 +87,7 @@ const Carousel = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     autoplay: true,
     autoplaySpeed: 2000,
     nextArrow: <NextArrow />,
@@ -53,15 +95,22 @@ const Carousel = () => {
   };
 
   return (
-    <CarouselContainer>
-      <StyledSlider {...settings}>
-        {images.map((src, index) => (
-          <div key={index}>
-            <StyledImage src={src} alt={`Slide ${index + 1}`} />
-          </div>
-        ))}
-      </StyledSlider>
-    </CarouselContainer>
+    <ContainerWrapper>
+      <CarouselContainer>
+        <StyledSlider {...settings}>
+          {images.map((src, index) => (
+            <div key={index}>
+              <StyledImage src={src} alt={`Slide ${index + 1}`} />
+            </div>
+          ))}
+        </StyledSlider>
+      </CarouselContainer>
+      <TextContainer>
+          <StyledHeading>Bem-vindo à nossa Barbearia</StyledHeading>
+          <StyledParagraph>Oferecemos os melhores serviços de corte de cabelo e barba. Venha nos visitar e tenha uma experiência incrível!</StyledParagraph>
+          <StyledTextImage src={cut} alt="Descrição da Imagem" />
+      </TextContainer>  
+    </ContainerWrapper>
   );
 };
 

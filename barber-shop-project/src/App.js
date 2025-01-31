@@ -2,7 +2,6 @@ import Header from './components/Header';
 import styled from 'styled-components';
 import Card from './components/Card';
 import Form from './components/Form';
-import GoogleMapsLink from './components/GoogleMaps';
 import PriceList from './components/PriceList';
 import ImageCarousel from './components/ImageCarousel';
 import HomeSection from './components/HomeMessage';
@@ -10,6 +9,8 @@ import PhotoCard from './components/Gallery';
 import ServicePriceComponent from './components/ServicePrice';
 import Footer from './components/Footer';
 import Background from './image/background-main.svg';
+import LocalAndFunc from './components/LocalAndFunc';
+import FloatingButton from './components/FloatingButton';
 
 const AppContainer = styled.div`
       width: 100%;
@@ -41,7 +42,8 @@ function App() {
     <div id="contato">
       <Form />
     </div>
-    <GoogleMapsLink />
+    <LocalAndFunc />
+    <FloatingButton />
     <Footer />
   </AppContainer>
 

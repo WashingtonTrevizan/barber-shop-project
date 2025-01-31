@@ -16,26 +16,6 @@ const Footer = () => {
         marginTop: 'auto',
       }}
     >
-      {/* Seção de Links */}
-      <Box sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', gap: '2rem', marginBottom: '1rem' }}>
-        <Box>
-          <Typography variant="h6" gutterBottom>
-            Navegação
-          </Typography>
-          <Link href="#" color="inherit" underline="none" display="block">
-            Home
-          </Link>
-          <Link href="#features" color="inherit" underline="none" display="block">
-            Recursos
-          </Link>
-          <Link href="#pricing" color="inherit" underline="none" display="block">
-            Preços
-          </Link>
-          <Link href="#contact" color="inherit" underline="none" display="block">
-            Contato
-          </Link>
-        </Box>
-
         {/* Seção de Redes sociais */}
         <Box>
           <Typography variant="h6" gutterBottom>
@@ -53,11 +33,7 @@ const Footer = () => {
         </Box>
       </Box>
 
-      {/* Seção de Direitos autorais */}
-      <Typography variant="body2" color="inherit" align="center">
-        © {new Date().getFullYear()} Sua Empresa. Todos os direitos reservados.
-      </Typography>
-    </Box>
+      
   );
 };
 

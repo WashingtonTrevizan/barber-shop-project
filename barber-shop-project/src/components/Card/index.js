@@ -1,20 +1,21 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Container as MuiContainer } from '@mui/material';
-import barberphoto1 from '../../image/barber-1.jpg';
-import barberphoto2 from '../../image/barber-2.jpg';
-import barberphoto3 from '../../image/barber-3.jpg';
+import barberphoto1 from '../../image/profissional1.jpeg';
+import barberphoto2 from '../../image/profissional2.jpeg';
+import barberphoto3 from '../../image/profissional3.jpeg';
 
 const CardDescription = styled.p`
   margin: 16px;
   text-align: center;
+  font-family: 'Font Diner', sans-serif;
 `;
 
 const CardImage = styled.img`
   border-radius: 8px;
   margin: 0 auto;
   text-align: center;
-  height: 200px;
+  height: 300px;
   width: 100%;
   object-fit: cover;
   display: block;
@@ -27,8 +28,18 @@ const StyledContainerProps = styled(MuiContainer)`
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   justify-content: center;
-  width: 300px;
+  width: 450px;
   flex: 1;
+  border-bottom: 1px solid #b8860b;
+    transition: box-shadow 0.3s ease; /* Adiciona transição suave */
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta a sombra no hover */
+  }
+
+  &:hover ${CardImage} {
+    transform: scale(1.05); /* Aumenta a escala da imagem no hover */
+  }
 
   @media (max-width: 768px) {
     width: 100%;
@@ -65,9 +76,9 @@ function Card() {
   return (
     <div>
       <StyledContainer>
-        <CardInfo description="Descrição 1" image={barberphoto1} />
-        <CardInfo description="Descrição 2" image={barberphoto2} />
-        <CardInfo description="Descrição 3" image={barberphoto3} />
+        <CardInfo description="Miguel Rasmuth" image={barberphoto1} />
+        <CardInfo description="José Roberto" image={barberphoto2} />
+        <CardInfo description="João Paulo" image={barberphoto3} />
       </StyledContainer>
     </div>
   );

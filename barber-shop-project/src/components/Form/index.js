@@ -10,6 +10,7 @@ const FormContainer = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   max-width: 100%;
+  border-bottom: 1px solid #b8860b;
 `;
 
 const Input = styled.input`
@@ -56,7 +57,7 @@ const Form = () => {
 
   return (
     <FormContainer>
-      <h2>Contact Us</h2>
+      <h2>Fale Conosco</h2>
       <form onSubmit={handleSubmit}>
         <Input
           type="text"
@@ -87,7 +88,7 @@ const Form = () => {
           onChange={handleChange}
           pattern="[0-9]*"
         />
-        <Button type="submit">Submit</Button>
+        <Button type="submit">Enviar</Button>
       </form>
     </FormContainer>
   );

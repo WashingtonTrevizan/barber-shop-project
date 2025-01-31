@@ -5,11 +5,15 @@ import styled from 'styled-components';
 const HeaderContainer = styled.header`
     background-color: #FFF;
     display: flex;
-    justify-content: flex-start; /* Alinha os itens à esquerda */
+    justify-content: space-between; 
     align-items: center;
     padding: 0 16px;
     box-shadow: 0 4px 2px -2px gray;
     border-bottom: 2px solid #ccc;
+
+    @media (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 
 const MobileOptionsHeader = styled(OptionsHeader)`
@@ -24,11 +28,19 @@ const MobileOptionsHeader = styled(OptionsHeader)`
     }
 `;
 
+const HeaderOptions = styled.div`
+  display: flex;
+  align-items: center;
+
+`;
+
 function Header() {
     return (
         <HeaderContainer>
             <Logo/>
+            <HeaderOptions>
             <MobileOptionsHeader/>
+            </HeaderOptions>
         </HeaderContainer>
     )
 }
